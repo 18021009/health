@@ -1,86 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <!-- HEADER -->
-    <div class="header">
-      <a href="./index.html"><div class="logo">E-health</div></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <title>Document</title>
+</head>
 
-      <div class="user">
-        <i class="fas fa-user"></i>
-      </div>
+<style>
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+</style>
+
+<body>
+  <!-- HEADER -->
+  <div class="header">
+    <a href="./index.html">
+      <div class="logo" style="padding: 0px; background-color: #333;">E-health</div>
+    </a>
+
+    <div class="user">
+      <i class="fas fa-user"></i>
+    </div>
+  </div>
+
+  <div class="main" style="padding: 0px;">
+    <!-- SIDER -->
+    <div class="sider">
+      <a href="./index.html" class="item">
+        <i class="fas fa-heartbeat"></i>
+        Chỉ số cơ thể
+      </a>
+
+      <a href="./datlichtheodoi.html" class="item">
+        <i class="fa fa-calendar"></i>
+        Đặt lịch theo dõi tại nhà
+      </a>
+
+      <a href="./datlichtaivien.html" class="item">
+        <i class="fas fa-hospital"></i>
+        Đặt lịch khám tại viện
+      </a>
+
+      <a href="./datlichtainha.html" class="item">
+        <i class="fa fa-medkit"></i>
+        Đặt lịch khám tại nhà
+      </a>
+
+      <a href="./medion/index.html" class="item">
+        <i class="fa fa-plus-square"></i>
+        Nhà thuốc online
+      </a>
+
+      <a href="./DROnline.html" class="item">
+        <i class="fa fa-user-md"></i>
+        Dr.online
+      </a>
+
+      <a href="./hoidap.html" class="item">
+        <i class="fas fa-question-circle"></i>
+        Hỏi đáp
+      </a>
     </div>
 
-    <div class="main">
-      <!-- SIDER -->
-      <div class="sider">
-        <a href="./index.html" class="item">
-          <i class="fas fa-heartbeat"></i>
-          Chỉ số cơ thể
-        </a>
+    <div class="content">
+      <form action="/action_page.php">
+        <label for="birthday">Ngày khám bệnh:</label>
+        <input type="date" id="birthday" name="birthday">
 
-        <a href="./datlichtheodoi.html" class="item">
-          <i class="fa fa-calendar"></i>
-          Đặt lịch theo dõi tại nhà
-        </a>
+        <label for="lname" style="display: block;">Địa chỉ</label>
+        <input type="text" id="lname" name="lastname" placeholder="Địa chỉ">
 
-        <a href="./datlichtaivien.html" class="item">
-          <i class="fas fa-hospital"></i>
-          Đặt lịch khám tại viện
-        </a>
+        <label for="country">Gói khám bệnh</label>
+        <select name="cars" id="cars">
+          <option value="volvo">Toàn thân</option>
+          <option value="saab">Thần Kinh</option>
+          <option value="mercedes">Ngoại vi</option>
+          <option value="audi">Da liễu</option>
+        </select>
 
-        <a href="./datlichtainha.html" class="item">
-          <i class="fa fa-medkit"></i>
-          Đặt lịch khám tại nhà
-        </a>
-
-        <a href="./medion/index.html" class="item">
-          <i class="fa fa-plus-square"></i>
-          Nhà thuốc online
-        </a>
-
-        <a href="./DROnline.html" class="item">
-          <i class="fa fa-user-md"></i>
-          Dr.online
-        </a>
-
-        <a href="./hoidap.html" class="item">
-          <i class="fas fa-question-circle"></i>
-          Hỏi đáp
-        </a>
-      </div>
-
-      <div class="content">
-        <div class="overview">
-          <div style="display: flex; justify-content: space-around">
-            <img src="./image/Frame 26.png" alt="" />
-            <img src="./image/Blood Sugar.png" alt="" />
-            <img src="./image/Blood Pressure.png" alt="" />
-          </div>
-          <div style="display: flex; justify-content: space-around">
-            <img
-              src="./image/Acitivity Growth.png"
-              alt=""
-              style="width: 699px; height: 380px"
-            />
-          </div>
-        </div>
-      </div>
+        <input type="submit" value="Submit">
+      </form>
     </div>
+  </div>
 
-    <script src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
+</body>
+
 </html>
